@@ -66,5 +66,6 @@ data_all_ave <- aggregate(data_all[, !(names(data_all) %in% c("activity_id", "su
 
 # Write the two datasets to files
 setwd('..')
-write.csv(data_all, file = 'data_all.csv')
-write.csv(data_all_ave, file = 'data_all_ave.csv')
+
+write.table(data_all, file = 'data_all.txt', sep='\t')
+write.table(data_all_ave, file = 'data_all_ave.txt', sep='\t')
